@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsWatchList</title>
+    <title>tesla91WatchList</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,14 @@
   </head>
 
   <body>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <div class="container-fluid">
+      <%= link_to "/", class: "navbar-brand" do %>
+        <%= image_tag "https://png2.cleanpng.com/sh/08a854a5c1d5590ca87d747107f784a7/L0KzQYq3V8MxN5dqiJH0aYP2gLBuTgBpd6V0fARqcHjsc37tifxuNZ50jttuLXPkfbb5gb1kcZ9qhdM2d3Xlg7r7hb1idpUyhdHraXzoPbL3kPxqa5J5gdH3LXTohrbzjCBubZ95ReVucobsc7a0VfQ0bpQASqc5ZXToRIq1WckzPmo8TaI6NUa3RIe4U8Q6OGc1UZD5bne=/kisspng-photographic-film-movie-camera-cinema-website-and-mobile-application-development-service-5d3fc9250ede49.9926975015644613490609.png" %>
+      <% end %>
+      <h3 class="nav-item">My Movie List's</h3>
+    </div>
+    </div>
     <%= yield %>
   </body>
 </html>

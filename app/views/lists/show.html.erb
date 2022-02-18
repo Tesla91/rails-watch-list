@@ -11,17 +11,21 @@
 
 <h4>Bookmarks</h2>
 
-<ul>
-  <% @list.bookmarks.each do |bookmark| %>
-    <li>
-      <%= image_tag bookmark.movie.poster_url, alt: "Movie Poster", width: 200 %>
-      <%= bookmark.movie.title %> |
-      <%= bookmark.movie.overview %> |
-      <%= bookmark.comment %>
-      <%= link_to 'Delete', bookmark_path(bookmark),
-                  method: :delete,
-                  data: { confirm: 'Are you sure?' }
-       %>
-    </li>
-  <% end %>
-</ul>
+
+<% @list.bookmarks.each do |bookmark| %>
+  <div class="card" style="width: 18rem;">
+    <img src="<%= bookmark.movie.poster_url %>" class="card-img-top" alt="MOvie Poster">
+    <div class="card-body">
+      <h5 class="card-title"><%= bookmark.movie.title %></h5>
+      <p class="card-text"><%= bookmark.movie.overview %></p>
+      <h5>Comments</h5>
+      <p class="card-text"><%= bookmark.comment %></p>
+      <div class="btn btn-warning">
+        <%= link_to 'Delete', bookmark_path(bookmark),
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' }
+        %>
+      </div>
+    </div>
+  </div>
+<% end %>

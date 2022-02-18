@@ -1,8 +1,16 @@
 <p id="notice"><%= notice %></p>
-<h1>My Lists</h1>
-<p>
-  <% @lists.each do |list| %>
-    <%= link_to list.name, list %></td>
-  <% end %>
-</p>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);">
+  <div class="container">
+    <h1>Save all your favorite movies into lists!</h1>
+  </div>
+</div>
+
+<div style='display: grid; grid-template-columns: 1fr 1fr 1fr;'>
+  <p>
+    <% @lists.each do |list| %>
+      <%= link_to list.name, list %></td>
+    <% end %>
+  </p>
+</div>
 <%= link_to 'New List', new_list_path , class: "btn btn-secondary"%>
