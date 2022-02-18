@@ -16,7 +16,9 @@
       <%= link_to "/", class: "navbar-brand" do %>
         <%= image_tag "https://png2.cleanpng.com/sh/08a854a5c1d5590ca87d747107f784a7/L0KzQYq3V8MxN5dqiJH0aYP2gLBuTgBpd6V0fARqcHjsc37tifxuNZ50jttuLXPkfbb5gb1kcZ9qhdM2d3Xlg7r7hb1idpUyhdHraXzoPbL3kPxqa5J5gdH3LXTohrbzjCBubZ95ReVucobsc7a0VfQ0bpQASqc5ZXToRIq1WckzPmo8TaI6NUa3RIe4U8Q6OGc1UZD5bne=/kisspng-photographic-film-movie-camera-cinema-website-and-mobile-application-development-service-5d3fc9250ede49.9926975015644613490609.png" %>
       <% end %>
-      <h3 class="nav-item">My Movie List's</h3>
+      <div class="nav-item">
+        <%= link_to 'New List', new_list_path, class: "navbar-brand" %>
+      </div>
     </div>
     </div>
     <%= yield %>
